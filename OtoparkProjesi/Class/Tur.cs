@@ -8,7 +8,7 @@ namespace OtoparkProjesi.Class
 {
     public class Tur
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public int MarkaID { get; set; }
 
 

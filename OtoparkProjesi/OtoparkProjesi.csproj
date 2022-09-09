@@ -69,6 +69,12 @@
     <Compile Include="Forms\frmMarka.Designer.cs">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTur.Designer.cs">
+      <DependentUpon>frmTur.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTur.resx">
+      <DependentUpon>frmTur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAnaSayfa.resx">
       <DependentUpon>frmAnaSayfa.cs</DependentUpon>

@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ücretTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.AyarlarTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.markaTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.araçİşlemleriTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.araçOtoparkGirişiTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.araçOtoparkÇıkışıTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.otoparkTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışTool = new System.Windows.Forms.ToolStripMenuItem();
             this.müşterilerTool = new System.Windows.Forms.ToolStripMenuItem();
             this.müşteriEkleTool = new System.Windows.Forms.ToolStripMenuItem();
             this.müşteriDüzenleTool = new System.Windows.Forms.ToolStripMenuItem();
             this.müşteriSilTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.araçİşlemleriTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.araçOtoparkGirişiTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.araçOtoparkÇıkışıTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.AyarlarTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.markaTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.turTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.ücretTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.otoparkTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.çıkışTool = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,68 +62,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ücretTool
-            // 
-            this.ücretTool.Name = "ücretTool";
-            this.ücretTool.Size = new System.Drawing.Size(47, 20);
-            this.ücretTool.Text = "Ücret";
-            // 
-            // AyarlarTool
-            // 
-            this.AyarlarTool.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.AyarlarTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.markaTool,
-            this.seriTool});
-            this.AyarlarTool.Name = "AyarlarTool";
-            this.AyarlarTool.Size = new System.Drawing.Size(56, 20);
-            this.AyarlarTool.Text = "Ayarlar";
-            // 
-            // markaTool
-            // 
-            this.markaTool.Name = "markaTool";
-            this.markaTool.Size = new System.Drawing.Size(180, 22);
-            this.markaTool.Text = "Marka";
-            this.markaTool.Click += new System.EventHandler(this.markaTool_Click);
-            // 
-            // seriTool
-            // 
-            this.seriTool.Name = "seriTool";
-            this.seriTool.Size = new System.Drawing.Size(180, 22);
-            this.seriTool.Text = "Seri";
-            // 
-            // araçİşlemleriTool
-            // 
-            this.araçİşlemleriTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.araçOtoparkGirişiTool,
-            this.araçOtoparkÇıkışıTool});
-            this.araçİşlemleriTool.Name = "araçİşlemleriTool";
-            this.araçİşlemleriTool.Size = new System.Drawing.Size(90, 20);
-            this.araçİşlemleriTool.Text = "Araç İşlemleri";
-            // 
-            // araçOtoparkGirişiTool
-            // 
-            this.araçOtoparkGirişiTool.Name = "araçOtoparkGirişiTool";
-            this.araçOtoparkGirişiTool.Size = new System.Drawing.Size(180, 22);
-            this.araçOtoparkGirişiTool.Text = "Araç Otopark Girişi";
-            // 
-            // araçOtoparkÇıkışıTool
-            // 
-            this.araçOtoparkÇıkışıTool.Name = "araçOtoparkÇıkışıTool";
-            this.araçOtoparkÇıkışıTool.Size = new System.Drawing.Size(180, 22);
-            this.araçOtoparkÇıkışıTool.Text = "Araç Otopark Çıkışı";
-            // 
-            // otoparkTool
-            // 
-            this.otoparkTool.Name = "otoparkTool";
-            this.otoparkTool.Size = new System.Drawing.Size(62, 20);
-            this.otoparkTool.Text = "Otopark";
-            // 
-            // çıkışTool
-            // 
-            this.çıkışTool.Name = "çıkışTool";
-            this.çıkışTool.Size = new System.Drawing.Size(44, 20);
-            this.çıkışTool.Text = "Çıkış";
-            // 
             // müşterilerTool
             // 
             this.müşterilerTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -137,20 +75,83 @@
             // müşteriEkleTool
             // 
             this.müşteriEkleTool.Name = "müşteriEkleTool";
-            this.müşteriEkleTool.Size = new System.Drawing.Size(180, 22);
+            this.müşteriEkleTool.Size = new System.Drawing.Size(159, 22);
             this.müşteriEkleTool.Text = "Müşteri Ekle";
             // 
             // müşteriDüzenleTool
             // 
             this.müşteriDüzenleTool.Name = "müşteriDüzenleTool";
-            this.müşteriDüzenleTool.Size = new System.Drawing.Size(180, 22);
+            this.müşteriDüzenleTool.Size = new System.Drawing.Size(159, 22);
             this.müşteriDüzenleTool.Text = "Müşteri Düzenle";
             // 
             // müşteriSilTool
             // 
             this.müşteriSilTool.Name = "müşteriSilTool";
-            this.müşteriSilTool.Size = new System.Drawing.Size(180, 22);
+            this.müşteriSilTool.Size = new System.Drawing.Size(159, 22);
             this.müşteriSilTool.Text = "Müşteri Sil";
+            // 
+            // araçİşlemleriTool
+            // 
+            this.araçİşlemleriTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.araçOtoparkGirişiTool,
+            this.araçOtoparkÇıkışıTool});
+            this.araçİşlemleriTool.Name = "araçİşlemleriTool";
+            this.araçİşlemleriTool.Size = new System.Drawing.Size(90, 20);
+            this.araçİşlemleriTool.Text = "Araç İşlemleri";
+            // 
+            // araçOtoparkGirişiTool
+            // 
+            this.araçOtoparkGirişiTool.Name = "araçOtoparkGirişiTool";
+            this.araçOtoparkGirişiTool.Size = new System.Drawing.Size(175, 22);
+            this.araçOtoparkGirişiTool.Text = "Araç Otopark Girişi";
+            // 
+            // araçOtoparkÇıkışıTool
+            // 
+            this.araçOtoparkÇıkışıTool.Name = "araçOtoparkÇıkışıTool";
+            this.araçOtoparkÇıkışıTool.Size = new System.Drawing.Size(175, 22);
+            this.araçOtoparkÇıkışıTool.Text = "Araç Otopark Çıkışı";
+            // 
+            // AyarlarTool
+            // 
+            this.AyarlarTool.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.AyarlarTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.markaTool,
+            this.turTool});
+            this.AyarlarTool.Name = "AyarlarTool";
+            this.AyarlarTool.Size = new System.Drawing.Size(56, 20);
+            this.AyarlarTool.Text = "Ayarlar";
+            // 
+            // markaTool
+            // 
+            this.markaTool.Name = "markaTool";
+            this.markaTool.Size = new System.Drawing.Size(180, 22);
+            this.markaTool.Text = "Marka";
+            this.markaTool.Click += new System.EventHandler(this.markaTool_Click);
+            // 
+            // turTool
+            // 
+            this.turTool.Name = "turTool";
+            this.turTool.Size = new System.Drawing.Size(180, 22);
+            this.turTool.Text = "Tür";
+            this.turTool.Click += new System.EventHandler(this.turTool_Click);
+            // 
+            // ücretTool
+            // 
+            this.ücretTool.Name = "ücretTool";
+            this.ücretTool.Size = new System.Drawing.Size(47, 20);
+            this.ücretTool.Text = "Ücret";
+            // 
+            // otoparkTool
+            // 
+            this.otoparkTool.Name = "otoparkTool";
+            this.otoparkTool.Size = new System.Drawing.Size(62, 20);
+            this.otoparkTool.Text = "Otopark";
+            // 
+            // çıkışTool
+            // 
+            this.çıkışTool.Name = "çıkışTool";
+            this.çıkışTool.Size = new System.Drawing.Size(44, 20);
+            this.çıkışTool.Text = "Çıkış";
             // 
             // contextMenuStrip1
             // 
@@ -179,7 +180,7 @@
         private System.Windows.Forms.ToolStripMenuItem ücretTool;
         private System.Windows.Forms.ToolStripMenuItem AyarlarTool;
         private System.Windows.Forms.ToolStripMenuItem markaTool;
-        private System.Windows.Forms.ToolStripMenuItem seriTool;
+        private System.Windows.Forms.ToolStripMenuItem turTool;
         private System.Windows.Forms.ToolStripMenuItem araçİşlemleriTool;
         private System.Windows.Forms.ToolStripMenuItem araçOtoparkGirişiTool;
         private System.Windows.Forms.ToolStripMenuItem araçOtoparkÇıkışıTool;

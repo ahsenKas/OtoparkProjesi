@@ -22,5 +22,12 @@ namespace OtoparkProjesi
             Forms.frmMarka marka = new Forms.frmMarka();
             marka.Show();
         }
+
+        private void turTool_Click(object sender, EventArgs e)
+        {
+
+            Forms.frmTur tur = new Forms.frmTur();
+            tur.Show();
+        }
     }
 }
