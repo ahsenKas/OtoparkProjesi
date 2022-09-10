@@ -322,8 +322,6 @@ namespace OtoparkProjesi.Forms
 
         private void btnParkYeriGuncelle_Click(object sender, EventArgs e)
         {
-            comboParkYeriAra.Items.Clear();
-
             Yenile();
         }
 
