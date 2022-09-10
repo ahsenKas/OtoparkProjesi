@@ -17,36 +17,39 @@ namespace OtoparkProjesi.Forms
         {
             InitializeComponent();
         }
-        OtoparkDbContext db = new OtoparkDbContext();
 
-        private void label3_Click(object sender, EventArgs e)
+        OtoparkDbContext db = new OtoparkDbContext();
+        private void frmOtoparkYerleri_Load(object sender, EventArgs e)
         {
+            PanelParkYerleri();
+
+            VeriTabanıParkYerleri();
+
+            var plakagoster = from x in db.AracParkBilgileri
+                              select new { x.Plaka, x.ParkyeriID };
+            foreach (var item in plakagoster)
+            {
+                foreach (Control lbl in panel1.Controls)
+                {
+                    if (lbl.Name == item.ParkyeriID.ToString() && lbl.BackColor == Color.Red)
+                    {
+                        lbl.Text = item.Plaka;
+                    }
+                }
+
+                foreach (Control lbl in panel2.Controls)
+                {
+                    if (lbl.Name == item.ParkyeriID.ToString() && lbl.BackColor == Color.Red)
+                    {
+                        lbl.Text = item.Plaka;
+                    }
+                }
+            }
 
         }
 
-        private void frmOtoparkYerleri_Load(object sender, EventArgs e)
+        private void VeriTabanıParkYerleri()
         {
-            int x = 1, y = 1;
-            foreach (Control item in panel1.Controls)
-            {
-                if (item is Label)
-                {
-                    item.Text = "A-" + x;
-                    item.Name = "A-" + x;
-                    x++;
-                }
-            }
-
-            foreach(Control item in panel2.Controls)
-            {
-                if(item is Label)
-                {
-                    item.Text = "B-" + y;
-                    item.Name = "B-" + y;
-                    y++;
-                }
-            }
-
             var parkyerleri = from i in db.AracParkYerleri
                               select new
                               {
@@ -57,15 +60,15 @@ namespace OtoparkProjesi.Forms
                               };
             foreach (var item in parkyerleri)
             {
-                foreach (Control lbl in panel1.Controls )
+                foreach (Control lbl in panel1.Controls)
                 {
-                    if(item.Durumu=="BOŞ" && item.ParkYerleri==lbl.Text)
+                    if (item.Durumu == "BOŞ" && item.ParkYerleri == lbl.Text)
                     {
                         lbl.BackColor = Color.Green;
                     }
-                    else if(item.Durumu=="DURUMU" && item.ParkYerleri==lbl.Text)
+                    else if (item.Durumu == "DURUMU" && item.ParkYerleri == lbl.Text)
                     {
-                        lbl.BackColor=Color.Red;
+                        lbl.BackColor = Color.Red;
                     }
                 }
 
@@ -95,5 +98,31 @@ namespace OtoparkProjesi.Forms
             }
         }
 
+        private void PanelParkYerleri()
+        {
+            int x = 1, y = 1, z = 11;
+            foreach (Control item in panel1.Controls)
+            {
+                if (item is Label)
+                {
+                    item.Text = "A-" + x;
+                    item.Name = x.ToString();
+                    x++;
+                }
+            }
+
+            foreach (Control item in panel2.Controls)
+            {
+                if (item is Label)
+                {
+                    item.Text = "B-" + y;
+                    item.Name = z.ToString();
+                    y++;
+                    z++;
+                }
+            }
         }
+
     }
+    }
+
