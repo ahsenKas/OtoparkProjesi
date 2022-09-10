@@ -41,9 +41,15 @@
             this.markaTool = new System.Windows.Forms.ToolStripMenuItem();
             this.turTool = new System.Windows.Forms.ToolStripMenuItem();
             this.ücretTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.otoparkTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.OtoparkYerleriTool = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışTool = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.müşteriListeleTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hIJToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +60,12 @@
             this.araçİşlemleriTool,
             this.AyarlarTool,
             this.ücretTool,
-            this.otoparkTool,
-            this.çıkışTool});
+            this.OtoparkYerleriTool,
+            this.çıkışTool,
+            this.aBCToolStripMenuItem,
+            this.dEFToolStripMenuItem,
+            this.hIJToolStripMenuItem,
+            this.saatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -67,7 +77,8 @@
             this.müşterilerTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.müşteriEkleTool,
             this.müşteriDüzenleTool,
-            this.müşteriSilTool});
+            this.müşteriSilTool,
+            this.müşteriListeleTool});
             this.müşterilerTool.Name = "müşterilerTool";
             this.müşterilerTool.Size = new System.Drawing.Size(72, 20);
             this.müşterilerTool.Text = "Müşteriler";
@@ -75,19 +86,19 @@
             // müşteriEkleTool
             // 
             this.müşteriEkleTool.Name = "müşteriEkleTool";
-            this.müşteriEkleTool.Size = new System.Drawing.Size(159, 22);
+            this.müşteriEkleTool.Size = new System.Drawing.Size(180, 22);
             this.müşteriEkleTool.Text = "Müşteri Ekle";
             // 
             // müşteriDüzenleTool
             // 
             this.müşteriDüzenleTool.Name = "müşteriDüzenleTool";
-            this.müşteriDüzenleTool.Size = new System.Drawing.Size(159, 22);
+            this.müşteriDüzenleTool.Size = new System.Drawing.Size(180, 22);
             this.müşteriDüzenleTool.Text = "Müşteri Düzenle";
             // 
             // müşteriSilTool
             // 
             this.müşteriSilTool.Name = "müşteriSilTool";
-            this.müşteriSilTool.Size = new System.Drawing.Size(159, 22);
+            this.müşteriSilTool.Size = new System.Drawing.Size(180, 22);
             this.müşteriSilTool.Text = "Müşteri Sil";
             // 
             // araçİşlemleriTool
@@ -141,11 +152,12 @@
             this.ücretTool.Size = new System.Drawing.Size(47, 20);
             this.ücretTool.Text = "Ücret";
             // 
-            // otoparkTool
+            // OtoparkYerleriTool
             // 
-            this.otoparkTool.Name = "otoparkTool";
-            this.otoparkTool.Size = new System.Drawing.Size(62, 20);
-            this.otoparkTool.Text = "Otopark";
+            this.OtoparkYerleriTool.Name = "OtoparkYerleriTool";
+            this.OtoparkYerleriTool.Size = new System.Drawing.Size(97, 20);
+            this.OtoparkYerleriTool.Text = "Otopark Yerleri";
+            this.OtoparkYerleriTool.Click += new System.EventHandler(this.OtoparkYerleriTool_Click);
             // 
             // çıkışTool
             // 
@@ -157,6 +169,44 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // müşteriListeleTool
+            // 
+            this.müşteriListeleTool.Name = "müşteriListeleTool";
+            this.müşteriListeleTool.Size = new System.Drawing.Size(180, 22);
+            this.müşteriListeleTool.Text = "Müşteri Listele";
+            this.müşteriListeleTool.Click += new System.EventHandler(this.müşteriListeleTool_Click);
+            // 
+            // aBCToolStripMenuItem
+            // 
+            this.aBCToolStripMenuItem.Name = "aBCToolStripMenuItem";
+            this.aBCToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.aBCToolStripMenuItem.Text = "ABC";
+            // 
+            // dEFToolStripMenuItem
+            // 
+            this.dEFToolStripMenuItem.Name = "dEFToolStripMenuItem";
+            this.dEFToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.dEFToolStripMenuItem.Text = "DEF";
+            // 
+            // hIJToolStripMenuItem
+            // 
+            this.hIJToolStripMenuItem.Name = "hIJToolStripMenuItem";
+            this.hIJToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.hIJToolStripMenuItem.Text = "HIJ";
+            // 
+            // saatToolStripMenuItem
+            // 
+            this.saatToolStripMenuItem.Margin = new System.Windows.Forms.Padding(150, 0, 0, 0);
+            this.saatToolStripMenuItem.Name = "saatToolStripMenuItem";
+            this.saatToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.saatToolStripMenuItem.Text = "Saat";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmAnaSayfa
             // 
@@ -184,13 +234,19 @@
         private System.Windows.Forms.ToolStripMenuItem araçİşlemleriTool;
         private System.Windows.Forms.ToolStripMenuItem araçOtoparkGirişiTool;
         private System.Windows.Forms.ToolStripMenuItem araçOtoparkÇıkışıTool;
-        private System.Windows.Forms.ToolStripMenuItem otoparkTool;
+        private System.Windows.Forms.ToolStripMenuItem OtoparkYerleriTool;
         private System.Windows.Forms.ToolStripMenuItem çıkışTool;
         private System.Windows.Forms.ToolStripMenuItem müşterilerTool;
         private System.Windows.Forms.ToolStripMenuItem müşteriEkleTool;
         private System.Windows.Forms.ToolStripMenuItem müşteriDüzenleTool;
         private System.Windows.Forms.ToolStripMenuItem müşteriSilTool;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem müşteriListeleTool;
+        private System.Windows.Forms.ToolStripMenuItem aBCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dEFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hIJToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saatToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

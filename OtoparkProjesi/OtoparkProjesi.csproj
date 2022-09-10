@@ -69,6 +69,18 @@
     <Compile Include="Forms\frmMarka.Designer.cs">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMusteriListeleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMusteriListeleme.Designer.cs">
+      <DependentUpon>frmMusteriListeleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOtoparkYerleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOtoparkYerleri.Designer.cs">
+      <DependentUpon>frmOtoparkYerleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmTur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMusteriListeleme.resx">
+      <DependentUpon>frmMusteriListeleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOtoparkYerleri.resx">
+      <DependentUpon>frmOtoparkYerleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTur.resx">
       <DependentUpon>frmTur.cs</DependentUpon>
