@@ -53,5 +53,12 @@ namespace OtoparkProjesi
             frm.Show();
 
         }
+
+        private void araçOtoparkÇıkışıTool_Click(object sender, EventArgs e)
+        {
+            Forms.frmAracOtoparkCikisi frm = new Forms.frmAracOtoparkCikisi();
+            frm.Show();
+
+        }
     }
 }

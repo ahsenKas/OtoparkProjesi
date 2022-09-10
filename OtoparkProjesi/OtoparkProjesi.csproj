@@ -63,6 +63,12 @@
     <Compile Include="Class\OtoparkDbContext.cs" />
     <Compile Include="Class\Tur.cs" />
     <Compile Include="Class\Ucret.cs" />
+    <Compile Include="Forms\frmAracOtoparkCikisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAracOtoparkCikisi.Designer.cs">
+      <DependentUpon>frmAracOtoparkCikisi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAracOtoparkGirisi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAracOtoparkCikisi.resx">
+      <DependentUpon>frmAracOtoparkCikisi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAracOtoparkGirisi.resx">
       <DependentUpon>frmAracOtoparkGirisi.cs</DependentUpon>
     </EmbeddedResource>

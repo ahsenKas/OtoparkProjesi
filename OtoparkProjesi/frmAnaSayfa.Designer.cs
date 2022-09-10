@@ -129,6 +129,7 @@
             this.araçOtoparkÇıkışıTool.Name = "araçOtoparkÇıkışıTool";
             this.araçOtoparkÇıkışıTool.Size = new System.Drawing.Size(180, 22);
             this.araçOtoparkÇıkışıTool.Text = "Araç Otopark Çıkışı";
+            this.araçOtoparkÇıkışıTool.Click += new System.EventHandler(this.araçOtoparkÇıkışıTool_Click);
             // 
             // AyarlarTool
             // 
