@@ -22,11 +22,8 @@ namespace OtoparkProjesi.Forms
         {
             #region FormLoad
             comboSaatUcreti.SelectedIndex = 0;
-            var plakagetir = db.AracParkBilgileri.ToList();
-            foreach (var item in plakagetir)
-            {
-                comboPlakaAra.Items.Add(item.Plaka);
-            }
+           
+            
 
             Yenile();
             var markagetir = db.Marka.ToList();
@@ -38,6 +35,14 @@ namespace OtoparkProjesi.Forms
 
         private void Yenile()
         {
+            comboPlakaAra.Text = "";
+            comboPlakaAra.Items.Clear();
+
+            var plakagetir = db.AracParkBilgileri.ToList();
+            foreach (var item in plakagetir)
+            {
+                comboPlakaAra.Items.Add(item.Plaka);
+            }
             var bosparkyerleri = db.AracParkYerleri.Where(x => x.Durumu == "BOŞ").ToList();
             comboParkYeri.DataSource = bosparkyerleri;
             comboParkYeri.DisplayMember = "ParkYerleri";
@@ -436,7 +441,7 @@ namespace OtoparkProjesi.Forms
         private void btnAracCikisi_Click(object sender, EventArgs e)
         {
             #region araccikisi
-            if (comboParkYeriAra.SelectedIndex!=-1)
+            if (comboParkYeriAra.Text!="")
             {
                 var ekle = new Ucret();
                 ekle.UcretId = int.Parse(txtID.Text);
@@ -481,6 +486,25 @@ namespace OtoparkProjesi.Forms
         private void comboSaatUcreti_SelectedIndexChanged(object sender, EventArgs e)
         {
             UcretHesapla();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            var guncelle = db.AracParkBilgileri.FirstOrDefault(x => x.ID.ToString() == txtID.Text);
+            guncelle.MarkaID = (int)comboMarka.SelectedValue;
+            guncelle.TurID = (int)comboTur.SelectedValue;
+            guncelle.Plaka = txtPlaka.Text;
+            guncelle.Aciklama = txtAciklama.Text;
+            db.SaveChanges();
+
+            MessageBox.Show("Araç bilgiler güncellendi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Yenile();
+            btnTemizle.PerformClick();
+            lblSure.Text = "0.00";
+            lblUcret.Text = "0.00";
+            lblGirisTarihi.Text = DateTime.Now.ToString();
+            lblCikisTarihi.Text = DateTime.Now.ToString();
+
         }
     }
 }

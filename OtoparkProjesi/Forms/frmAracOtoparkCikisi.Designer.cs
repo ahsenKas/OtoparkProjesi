@@ -257,6 +257,7 @@
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnAracCikisi
             // 
