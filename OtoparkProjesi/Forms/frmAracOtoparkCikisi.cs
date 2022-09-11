@@ -96,7 +96,7 @@ namespace OtoparkProjesi.Forms
                          join z in db.Tur on x.TurID equals z.ID
                          join
                          w in db.AracParkYerleri on x.ParkyeriID equals w.ID
-                         select new { x.ID, x.MusteriID, x.AdiSoyadi, x.Telefon, x.Plaka, x.GirisTarihi,
+                         select new { x.ID, x.MusteriID, x.AdiSoyadi, x.Telefon, x.Plaka, x.Aciklama,x.GirisTarihi, 
                          y.MarkaAdi, z.tur, w.ParkYerleri
                          }).Where(ara => ara.ID.ToString() == txtIDAra.Text).ToList();
 
@@ -110,6 +110,7 @@ namespace OtoparkProjesi.Forms
                 comboTur.Text = item.tur;
                 txtPlaka.Text=item.Plaka;
                 comboParkYeri.Text = item.ParkYerleri;
+                txtAciklama.Text = item.Aciklama;
                 lblGirisTarihi.Text = item.GirisTarihi.ToString();                
             }
             #endregion
@@ -164,7 +165,6 @@ namespace OtoparkProjesi.Forms
             #endregion
 
         }
-
         private void txtAdSoyadAra_TextChanged(object sender, EventArgs e)
         {
             if (txtAdSoyadAra.Text == "")
@@ -214,8 +214,7 @@ namespace OtoparkProjesi.Forms
         }
 
         private void comboPlakaAra_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+        {        
 
             #region Plaka_Ara
             var PlakaAra = (from x in db.AracParkBilgileri
@@ -253,8 +252,7 @@ namespace OtoparkProjesi.Forms
         }
 
         private void comboParkYeriAra_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+        {            
 
             #region ParkYeri_Ara
             var ParkYeriAra = (from x in db.AracParkBilgileri
@@ -322,7 +320,21 @@ namespace OtoparkProjesi.Forms
 
         private void btnParkYeriGuncelle_Click(object sender, EventArgs e)
         {
+            var DoluParkYeriDegistir = db.AracParkYerleri.FirstOrDefault(x => x.ParkYerleri == comboParkYeriAra.Text);
+            DoluParkYeriDegistir.Durumu = "BOŞ";
+            db.SaveChanges();
+            var BosParkYeriDegistir = db.AracParkYerleri.FirstOrDefault(x => x.ParkYerleri == comboParkYeri.Text);
+            BosParkYeriDegistir.Durumu = "DOLU";
+            db.SaveChanges();
+            var aracparkyeridegistir = db.AracParkBilgileri.FirstOrDefault(x => x.Plaka == txtPlaka.Text);
+            aracparkyeridegistir.ParkyeriID = (int)comboParkYeri.SelectedValue;
+            db.SaveChanges();
+            MessageBox.Show("Araç park yeri güncellendi", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            comboParkYeriAra.Items.Clear();
+
             Yenile();
+            btnTemizle.PerformClick();
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
