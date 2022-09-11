@@ -40,6 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelIslemler = new System.Windows.Forms.Panel();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnParkYeriGuncelle = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnAracCikis = new System.Windows.Forms.Button();
             this.lblUcret = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lblSure = new System.Windows.Forms.Label();
@@ -49,6 +55,8 @@
             this.lblGirisTarihi = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panelBilgiler = new System.Windows.Forms.Panel();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboSaatUcreti = new System.Windows.Forms.ComboBox();
             this.comboParkYeri = new System.Windows.Forms.ComboBox();
             this.comboTur = new System.Windows.Forms.ComboBox();
@@ -67,14 +75,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAracCikis = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnParkYeriGuncelle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtAciklama = new System.Windows.Forms.TextBox();
-            this.btnTemizle = new System.Windows.Forms.Button();
             this.panelArama.SuspendLayout();
             this.panelIslemler.SuspendLayout();
             this.panelBilgiler.SuspendLayout();
@@ -209,6 +209,64 @@
             this.panelIslemler.Size = new System.Drawing.Size(647, 106);
             this.panelIslemler.TabIndex = 1;
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(405, 71);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(76, 23);
+            this.btnTemizle.TabIndex = 29;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.Location = new System.Drawing.Point(568, 71);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(76, 23);
+            this.btnCikis.TabIndex = 28;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(487, 71);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(76, 23);
+            this.btnSil.TabIndex = 27;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnParkYeriGuncelle
+            // 
+            this.btnParkYeriGuncelle.Location = new System.Drawing.Point(285, 71);
+            this.btnParkYeriGuncelle.Name = "btnParkYeriGuncelle";
+            this.btnParkYeriGuncelle.Size = new System.Drawing.Size(114, 23);
+            this.btnParkYeriGuncelle.TabIndex = 26;
+            this.btnParkYeriGuncelle.Text = "Park Yeri Güncelle";
+            this.btnParkYeriGuncelle.UseVisualStyleBackColor = true;
+            this.btnParkYeriGuncelle.Click += new System.EventHandler(this.btnParkYeriGuncelle_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(206, 71);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(73, 23);
+            this.btnGuncelle.TabIndex = 25;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // btnAracCikis
+            // 
+            this.btnAracCikis.Location = new System.Drawing.Point(124, 71);
+            this.btnAracCikis.Name = "btnAracCikis";
+            this.btnAracCikis.Size = new System.Drawing.Size(76, 23);
+            this.btnAracCikis.TabIndex = 24;
+            this.btnAracCikis.Text = "Araç Çıkış";
+            this.btnAracCikis.UseVisualStyleBackColor = true;
+            // 
             // lblUcret
             // 
             this.lblUcret.AutoSize = true;
@@ -316,6 +374,22 @@
             this.panelBilgiler.Name = "panelBilgiler";
             this.panelBilgiler.Size = new System.Drawing.Size(647, 197);
             this.panelBilgiler.TabIndex = 2;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(93, 116);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(121, 20);
+            this.txtAciklama.TabIndex = 25;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 123);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 13);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Aciklama";
             // 
             // comboSaatUcreti
             // 
@@ -469,79 +543,6 @@
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "ID";
-            // 
-            // btnAracCikis
-            // 
-            this.btnAracCikis.Location = new System.Drawing.Point(124, 71);
-            this.btnAracCikis.Name = "btnAracCikis";
-            this.btnAracCikis.Size = new System.Drawing.Size(76, 23);
-            this.btnAracCikis.TabIndex = 24;
-            this.btnAracCikis.Text = "Araç Çıkış";
-            this.btnAracCikis.UseVisualStyleBackColor = true;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(206, 71);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(73, 23);
-            this.btnGuncelle.TabIndex = 25;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // btnParkYeriGuncelle
-            // 
-            this.btnParkYeriGuncelle.Location = new System.Drawing.Point(285, 71);
-            this.btnParkYeriGuncelle.Name = "btnParkYeriGuncelle";
-            this.btnParkYeriGuncelle.Size = new System.Drawing.Size(114, 23);
-            this.btnParkYeriGuncelle.TabIndex = 26;
-            this.btnParkYeriGuncelle.Text = "Park Yeri Güncelle";
-            this.btnParkYeriGuncelle.UseVisualStyleBackColor = true;
-            this.btnParkYeriGuncelle.Click += new System.EventHandler(this.btnParkYeriGuncelle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(487, 71);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(76, 23);
-            this.btnSil.TabIndex = 27;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.Location = new System.Drawing.Point(568, 71);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(76, 23);
-            this.btnCikis.TabIndex = 28;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 123);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 13);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Aciklama";
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(93, 116);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(121, 20);
-            this.txtAciklama.TabIndex = 25;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Location = new System.Drawing.Point(405, 71);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(76, 23);
-            this.btnTemizle.TabIndex = 29;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // frmAracOtoparkCikisi
             // 

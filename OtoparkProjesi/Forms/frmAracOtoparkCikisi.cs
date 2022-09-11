@@ -330,9 +330,7 @@ namespace OtoparkProjesi.Forms
             aracparkyeridegistir.ParkyeriID = (int)comboParkYeri.SelectedValue;
             db.SaveChanges();
             MessageBox.Show("Araç park yeri güncellendi", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             comboParkYeriAra.Items.Clear();
-
             Yenile();
             btnTemizle.PerformClick();
         }
@@ -372,6 +370,23 @@ namespace OtoparkProjesi.Forms
                   
                 }
             }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            #region sil
+            var sil = db.AracParkBilgileri.FirstOrDefault(x => x.Plaka == txtPlaka.Text);
+            db.AracParkBilgileri.Remove(sil);
+            db.SaveChanges();
+
+            var aracparkyeribosalt = db.AracParkYerleri.FirstOrDefault(x => x.ParkYerleri == comboParkYeri.Text);
+            aracparkyeribosalt.Durumu = "BOŞ";
+            db.SaveChanges();
+            #endregion
+            MessageBox.Show("Araç park yeri kaydı silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            comboParkYeriAra.Items.Clear();
+            Yenile();
+            btnTemizle.PerformClick();
         }
     }
 }
