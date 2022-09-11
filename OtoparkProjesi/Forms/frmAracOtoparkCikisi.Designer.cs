@@ -45,7 +45,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnParkYeriGuncelle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnAracCikis = new System.Windows.Forms.Button();
+            this.btnAracCikisi = new System.Windows.Forms.Button();
             this.lblUcret = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lblSure = new System.Windows.Forms.Label();
@@ -194,7 +194,7 @@
             this.panelIslemler.Controls.Add(this.btnSil);
             this.panelIslemler.Controls.Add(this.btnParkYeriGuncelle);
             this.panelIslemler.Controls.Add(this.btnGuncelle);
-            this.panelIslemler.Controls.Add(this.btnAracCikis);
+            this.panelIslemler.Controls.Add(this.btnAracCikisi);
             this.panelIslemler.Controls.Add(this.lblUcret);
             this.panelIslemler.Controls.Add(this.label23);
             this.panelIslemler.Controls.Add(this.lblSure);
@@ -258,14 +258,15 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // btnAracCikis
+            // btnAracCikisi
             // 
-            this.btnAracCikis.Location = new System.Drawing.Point(124, 71);
-            this.btnAracCikis.Name = "btnAracCikis";
-            this.btnAracCikis.Size = new System.Drawing.Size(76, 23);
-            this.btnAracCikis.TabIndex = 24;
-            this.btnAracCikis.Text = "Araç Çıkış";
-            this.btnAracCikis.UseVisualStyleBackColor = true;
+            this.btnAracCikisi.Location = new System.Drawing.Point(124, 71);
+            this.btnAracCikisi.Name = "btnAracCikisi";
+            this.btnAracCikisi.Size = new System.Drawing.Size(76, 23);
+            this.btnAracCikisi.TabIndex = 24;
+            this.btnAracCikisi.Text = "Araç Çıkış";
+            this.btnAracCikisi.UseVisualStyleBackColor = true;
+            this.btnAracCikisi.Click += new System.EventHandler(this.btnAracCikisi_Click);
             // 
             // lblUcret
             // 
@@ -401,6 +402,7 @@
             this.comboSaatUcreti.Name = "comboSaatUcreti";
             this.comboSaatUcreti.Size = new System.Drawing.Size(121, 21);
             this.comboSaatUcreti.TabIndex = 23;
+            this.comboSaatUcreti.SelectedIndexChanged += new System.EventHandler(this.comboSaatUcreti_SelectedIndexChanged);
             // 
             // comboParkYeri
             // 
@@ -610,7 +612,7 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnParkYeriGuncelle;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnAracCikis;
+        private System.Windows.Forms.Button btnAracCikisi;
         private System.Windows.Forms.Panel panelBilgiler;
         private System.Windows.Forms.TextBox txtAciklama;
         private System.Windows.Forms.Label label14;
